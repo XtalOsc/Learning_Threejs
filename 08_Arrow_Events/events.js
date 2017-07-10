@@ -27,7 +27,7 @@ var example = (function(){
         box.name = "box";
         scene.add(box);
 
-        var texture = THREE.ImageUtils.loadTexture('grass.jpeg');
+        var texture = THREE.ImageUtils.loadTexture('content/grass.jpeg');
         var planeMaterial = new THREE.MeshPhongMaterial({
           map: texture,
           side: THREE.DoubleSide
