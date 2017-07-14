@@ -41,7 +41,19 @@ Physijs.scripts.ammo = 'ammo.js';
 
         scene.add(box);
 
-        var groundMaterial = Physijs.createMaterial(
+        box.addEventListener('collision', function (
+            otherObject,
+            relativeVelocity,
+            relativeRotation,
+            contactNormal) {
+
+            if (otherObject.name == "ground") {
+                alert('hit ground')
+            }//end if
+
+        });//box.addEventListener function
+
+          var groundMaterial = Physijs.createMaterial(
           new THREE.MeshBasicMaterial({color: 0x008888}),
           0, //friction
           .6 //restitution/bounciness
